@@ -1,4 +1,4 @@
-package com.justkaira.ms.model;
+package com.justkaira.mscommon.model;
 
 public class User {
 

@@ -1,4 +1,4 @@
-package com.justkaira.ms.env;
+package com.justkaira.mscommon.env;
 
 import com.justkaira.env.GlobalEnvConst;
 

@@ -1,6 +1,6 @@
-package com.justkaira.ms.controller;
+package com.justkaira.mscommon.controller;
 
-import com.justkaira.ms.model.Credential;
+import com.justkaira.mscommon.model.Credential;
 
 public class AuthController {
 

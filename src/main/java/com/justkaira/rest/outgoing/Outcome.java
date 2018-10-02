@@ -1,6 +1,8 @@
 package com.justkaira.rest.outgoing;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 public class Outcome {
 	public static final String STRING_PAYLOAD = "text";
@@ -62,4 +64,18 @@ public class Outcome {
 		return this;
 	}
 
+    public Outcome addPayload(List endpoints) {
+		payload.put(ENTITY_LIST_PAYLOAD, endpoints);
+		return this;
+    }
+
+	public Outcome addPayload(int data) {
+		addPayload(Integer.toString(data));
+		return this;
+	}
+
+	public Outcome addPayload(Object[] array) {
+		addPayload(Arrays.asList(array));
+		return this;
+	}
 }

@@ -1,4 +1,4 @@
-package com.justkaira.ms.service;
+package com.justkaira.mscommon.service;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.justkaira.ms.controller.AuthController;
-import com.justkaira.ms.model.Credential;
+import com.justkaira.mscommon.controller.AuthController;
+import com.justkaira.mscommon.model.Credential;
 import com.justkaira.rest.outgoing.Outcome;
 
 @CrossOrigin(origins = "http://localhost:8081")

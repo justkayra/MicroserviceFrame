@@ -1,6 +1,6 @@
-package com.justkaira.ms.model;
+package com.justkaira.mscommon.model;
 
-public class Credential {
+public class Credential implements IAppEntity{
 	private String login;
 	private String pwd;
 	private String hash;

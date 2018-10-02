@@ -1,4 +1,4 @@
-package com.justkaira.ms.service;
+package com.justkaira.mscommon.service;
 
 import java.util.Map;
 
