@@ -1,9 +1,9 @@
 package com.justkaira.env;
 
+import com.justkaira.localization.constants.LanguageCode;
+
 import java.nio.file.Paths;
 import java.util.Arrays;
-
-import com.justkaira.localization.constants.LanguageCode;
 
 public class GlobalEnvConst {
 	public static String VERSION = "1.0.0";
@@ -24,4 +24,6 @@ public class GlobalEnvConst {
 	public static final LanguageCode[] getDefaultLangs() {
 		return Arrays.stream(DEFAULT_LANGS).map((v) -> LanguageCode.valueOf(v)).toArray(LanguageCode[]::new);
 	}
+
+	public static final String SERVICE_PACKAGE = "com.justkaira.mscommon";
 }

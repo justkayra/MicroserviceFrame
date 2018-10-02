@@ -1,7 +1,9 @@
 package com.justkaira.mscommon.service;
 
-import com.justkaira.env.Environment;
+
+import com.justkaira.env.GlobalEnvConst;
 import com.justkaira.mscommon.controller.IServiceInteraction;
+import com.justkaira.rest.outgoing.Outcome;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpEntity;
@@ -9,13 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.justkaira.rest.outgoing.Outcome;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
-
-import java.sql.SQLException;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
@@ -36,7 +33,7 @@ public class DefaultService implements ErrorController {
 	public HttpEntity<Outcome> getIndex() {
 		Outcome outcome = new Outcome();
 		try {
-			Class<IServiceInteraction> serviceInteractionClass = (Class<IServiceInteraction>) Class.forName(Environment.SERVICE_PACKAGE + ".service.ServiceInfoProvider");
+			Class<IServiceInteraction> serviceInteractionClass = (Class<IServiceInteraction>) Class.forName(GlobalEnvConst.SERVICE_PACKAGE + ".service.ServiceInfoProvider");
 			IServiceInteraction serviceInteraction = serviceInteractionClass.newInstance();
 			outcome.addPayload(serviceInteraction.getEndpoints());
 		} catch (ClassNotFoundException e) {
